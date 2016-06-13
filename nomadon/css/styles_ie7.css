@@ -1,0 +1,16 @@
+/* 
+    Document   : styles_ie7only
+    Created on : 07-mars-2012, 10:44:53
+    Author     : cedric
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+div#compte{
+    width: 150px; /*dans le cas contraire il prend 100% de l'espace et se retrouve a gauche*/
+}

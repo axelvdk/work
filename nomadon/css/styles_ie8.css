@@ -1,0 +1,32 @@
+/* 
+    Document   : styles_ie8
+    Created on : 07-mars-2012, 9:58:24
+    Author     : cedric
+    Description:
+        Purpose of the stylesheet follows.
+*/
+/*
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+#menu2,  #contenu, footer#principal{
+    border:1px solid #bcbcbc;  /*border-box non compatible, on fait juste un cadre gris*/
+}
+
+div#compte p.compte_m1{
+   border:1px solid #bcbcbc; /*border-box non compatible, on fait juste un cadre gris*/
+   border-bottom: 0;
+}
+
+div#compte p.compte_m2{
+   border:1px solid #bcbcbc; /*border-box non compatible, on fait juste un cadre gris*/
+   border-top: 0;
+   border-bottom: 0;
+}
+
+div#compte p.panier{
+    border:1px solid #bcbcbc; /*border-box non compatible, on fait juste un cadre gris*/
+    border-top: 0;
+}

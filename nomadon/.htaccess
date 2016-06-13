@@ -1,0 +1,44 @@
+#--------------------------------------------------
+# R�pertoire : racine
+#--------------------------------------------------
+
+# Le serveur doit suivre les liens symboliques :
+Options +FollowSymlinks
+
+# Activation du module de r��criture d'URL :
+RewriteEngine on
+
+#--------------------------------------------------
+# R�gles de r��criture d'URL :
+#--------------------------------------------------
+
+# modification du mot de passe :
+RewriteRule ^([a-z]+)-modifpw([0-9]+)-([a-zA-Z0-9\-]+)-([a-zA-Z0-9\-]+)\.html$ ./index2.php?p=106&lang=$1&action=$2&login=$3&ctrl=$4 [L]
+
+# telechargement des element virtuels :
+RewriteRule ^([a-z]+)-download([0-9]+)-([a-zA-Z0-9\-]+)\.html$ ./index2.php?p=15&lang=$1&bl=$2&pw=$3 [QSA,L]
+
+
+# juste les pages, non compris le catalogue :
+RewriteRule ^([a-z]+)-pg([0-9]+)-([a-z0-9\-]+)\.html$ ./index2.php?p=$2&lang=$1 [QSA,L]
+
+# juste le catalogue niveau 0 :
+RewriteRule ^([a-z]+)-pg([0-9]+),cat([0-9]+)-([a-z0-9\-]+),([a-z0-9\ø-]+)\.html$ ./index2.php?p=$2&lang=$1&e=$3&url=$4 [QSA,L]
+
+# les divers niveaux ar_x jusqu'a 10:
+RewriteRule ^([a-z]+)-pg([0-9]+),cat([0-9]+),([0-9]+)-([a-z0-9\-]+),([a-z0-9\ø-]+)\.html$ ./index2.php?p=$2&lang=$1&e=$3&ar_1=$4&url=$5 [QSA,L]
+RewriteRule ^([a-z]+)-pg([0-9]+),cat([0-9]+),([0-9]+),([0-9]+)-([a-z0-9\-]+),([a-z0-9\ø-]+)\.html$ ./index2.php?p=$2&lang=$1&e=$3&ar_1=$4&ar_2=$5&url=$7 [QSA,L]
+RewriteRule ^([a-z]+)-pg([0-9]+),cat([0-9]+),([0-9]+),([0-9]+),([0-9]+)-([a-z0-9\-]+),([a-z0-9\ø-]+)\.html$ ./index2.php?p=$2&lang=$1&e=$3&ar_1=$4&ar_2=$5&ar_3=$6&url=$8 [QSA,L]
+RewriteRule ^([a-z]+)-pg([0-9]+),cat([0-9]+),([0-9]+),([0-9]+),([0-9]+),([0-9]+)-([a-z0-9\-]+),([a-z0-9\ø-]+)\.html$ ./index2.php?p=$2&lang=$1&e=$3&ar_1=$4&ar_2=$5&ar_3=$6&ar_4=$7&url=$9 [QSA,L]
+RewriteRule ^([a-z]+)-pg([0-9]+),cat([0-9]+),([0-9]+),([0-9]+),([0-9]+),([0-9]+),([0-9]+)-([a-z0-9\-]+),([a-z0-9\ø-]+)\.html$ ./index2.php?p=$2&lang=$1&e=$3&ar_1=$4&ar_2=$5&ar_3=$6&ar_4=$7&ar_5=$8&url=$10 [QSA,L]
+RewriteRule ^([a-z]+)-pg([0-9]+),cat([0-9]+),([0-9]+),([0-9]+),([0-9]+),([0-9]+),([0-9]+),([0-9]+)-([a-z0-9\-]+),([a-z0-9\ø-]+)\.html$ ./index2.php?p=$2&lang=$1&e=$3&ar_1=$4&ar_2=$5&ar_3=$6&ar_4=$7&ar_5=$8&ar_6=$9&url=$11 [QSA,L]
+RewriteRule ^([a-z]+)-pg([0-9]+),cat([0-9]+),([0-9]+),([0-9]+),([0-9]+),([0-9]+),([0-9]+),([0-9]+),([0-9]+)-([a-z0-9\-]+),([a-z0-9\ø-]+)\.html$ ./index2.php?p=$2&lang=$1&e=$3&ar_1=$4&ar_2=$5&ar_3=$6&ar_4=$7&ar_5=$8&ar_6=$9&ar_7=$10&url=$12 [QSA,L]
+RewriteRule ^([a-z]+)-pg([0-9]+),cat([0-9]+),([0-9]+),([0-9]+),([0-9]+),([0-9]+),([0-9]+),([0-9]+),([0-9]+),([0-9]+)-([a-z0-9\-]+),([a-z0-9\ø-]+)\.html$ ./index2.php?p=$2&lang=$1&e=$3&ar_1=$4&ar_2=$5&ar_3=$6&ar_4=$7&ar_5=$8&ar_6=$9&ar_7=$10&ar8=$11&url=$13 [QSA,L]
+RewriteRule ^([a-z]+)-pg([0-9]+),cat([0-9]+),([0-9]+),([0-9]+),([0-9]+),([0-9]+),([0-9]+),([0-9]+),([0-9]+),([0-9]+),([0-9]+)-([a-z0-9\-]+),([a-z0-9\ø-]+)\.html$ ./index2.php?p=$2&lang=$1&e=$3&ar_1=$4&ar_2=$5&ar_3=$6&ar_4=$7&ar_5=$8&ar_6=$9&ar_7=$10&ar_8=$11&ar9=$12&url=$14 [QSA,L]
+RewriteRule ^([a-z]+)-pg([0-9]+),cat([0-9]+),([0-9]+),([0-9]+),([0-9]+),([0-9]+),([0-9]+),([0-9]+),([0-9]+),([0-9]+),([0-9]+),([0-9]+)-([a-z0-9\-]+),([a-z0-9\ø-]+)\.html$ ./index2.php?p=$2&lang=$1&e=$3&ar_1=$4&ar_2=$5&ar_3=$6&ar_4=$7&ar_5=$8&ar_6=$9&ar_7=$10&ar_8=$11&ar9=$12&ar10=$13&url=$15 [QSA,L]
+
+# le moteur de recherche :
+RewriteRule ^([a-z]+)-recherche.html$ ./index2.php?p=3&lang=$1&find=1 [QSA,L]
+
+# ajout article :
+RewriteRule ^([a-z]+)-ajtart.html$ ./pages/panier.php?lang=$1 [QSA,L]
