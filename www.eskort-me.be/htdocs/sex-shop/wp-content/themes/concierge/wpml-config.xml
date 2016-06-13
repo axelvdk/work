@@ -1,0 +1,244 @@
+<wpml-config>
+
+	<custom-fields> 
+		<custom-field action="copy">_concierge_block_style_background_color</custom-field>
+		<custom-field action="copy">_concierge_block_style_background_image</custom-field>
+		<custom-field action="copy">_concierge_block_testimonial_no_of_testimonial</custom-field>
+		<custom-field action="copy">_concierge_block_testimonial_testimonial_show_or_hide</custom-field>
+		<custom-field action="copy">_concierge_block_type</custom-field>
+		<custom-field action="copy">_concierge_company_location_email</custom-field>
+		<custom-field action="copy">_concierge_company_location_fax</custom-field>
+		<custom-field action="copy">_concierge_company_location_field</custom-field>
+		<custom-field action="copy">_concierge_company_location_icon</custom-field>
+		<custom-field action="copy">_concierge_company_location_phone</custom-field>
+		<custom-field action="copy">_concierge_company_location_place</custom-field>
+		<custom-field action="copy">_concierge_company_location_website</custom-field>
+		<custom-field action="copy">_concierge_contact_address</custom-field>
+		<custom-field action="copy">_concierge_driver_designation</custom-field>
+		<custom-field action="copy">_concierge_driver_experience</custom-field>
+		<custom-field action="copy">_concierge_driver_language</custom-field>
+		<custom-field action="copy">_concierge_driver_name</custom-field>
+		<custom-field action="copy">_concierge_driver_special_training</custom-field>
+		<custom-field action="copy">_concierge_front_page_selected_block</custom-field>
+		<custom-field action="copy">_concierge_property_address_convert_zip</custom-field>
+		<custom-field action="copy">_concierge_property_address_country_name</custom-field>
+		<custom-field action="copy">_concierge_property_address_lat</custom-field>
+		<custom-field action="copy">_concierge_property_address_lng</custom-field>
+		<custom-field action="copy">_concierge_property_address_map_canvas</custom-field>
+		<custom-field action="copy">_concierge_property_address_name</custom-field>
+		<custom-field action="copy">_concierge_property_address_region_name</custom-field>
+		<custom-field action="copy">_concierge_property_address_zip</custom-field>
+		<custom-field action="copy">_concierge_testimonial_author_address</custom-field>
+		<custom-field action="copy">_concierge_testimonial_author_company</custom-field>
+		<custom-field action="copy">_concierge_testimonial_author_designation</custom-field>
+		<custom-field action="copy">_concierge_testimonial_author_name</custom-field>
+		<custom-field action="copy">_concierge_vehicle_additional_people_capacity</custom-field>
+		<custom-field action="copy">_concierge_vehicle_age</custom-field>
+		<custom-field action="copy">_concierge_vehicle_fuel_capacity</custom-field>
+		<custom-field action="copy">_concierge_vehicle_max_speed</custom-field>
+		<custom-field action="copy">_concierge_vehicle_max_weight</custom-field>
+		<custom-field action="copy">_concierge_vehicle_people_capacity</custom-field>
+		<custom-field action="copy">_concierge_vehicle_pilots</custom-field>
+		<custom-field action="copy">_concierge_pricing_table</custom-field>
+		<custom-field action="copy">_concierge_property_address_page_templates</custom-field>
+		<custom-field action="copy">_concierge_testimonial_author_rating</custom-field>
+		
+	</custom-fields>
+	
+	<custom-types>
+		<custom-type translate="1">block</custom-type>
+		<custom-type translate="1">testimonial</custom-type>
+		<custom-type translate="1">driver</custom-type>
+		<custom-type translate="1">company_location</custom-type>
+	</custom-types>
+
+	<taxonomies>
+		<taxonomy translate="1">vechicle_type</taxonomy>
+		<taxonomy translate="1">vechicle_location</taxonomy>
+		<taxonomy translate="1">yachts_model</taxonomy>
+		<taxonomy translate="1">private_jet_model</taxonomy>
+		<taxonomy translate="1">luxury_cars_model</taxonomy>
+		<taxonomy translate="1">car_transfer_model</taxonomy>	
+		<taxonomy translate="1">pricing_table</taxonomy>		
+	</taxonomies>
+	
+    <admin-texts>
+		<key name="concierge_option_data">			
+			<key name="concierge-favicon">
+				<key name="1">
+					<key name="url" />
+					<key name="height" />
+					<key name="width" />
+					<key name="thumbnail" />					
+				</key>				
+			</key>
+			<key name="concierge-favicon-iphone">
+				<key name="1">
+					<key name="url" />
+					<key name="height" />
+					<key name="width" />
+					<key name="thumbnail" />					
+				</key>				
+			</key>
+			<key name="concierge-favicon-ipad">
+				<key name="1">
+					<key name="url" />
+					<key name="height" />
+					<key name="width" />
+					<key name="thumbnail" />					
+				</key>				
+			</key>
+
+			<key name="concierge-custom-css" />
+			<key name="concierge-custom-js" />
+			<key name="testimonial-type" />
+			<key name="concierge-header-icon">
+				<key name="1">
+					<key name="url" />
+					<key name="height" />
+					<key name="width" />
+					<key name="thumbnail" />					
+				</key>				
+			</key>
+			<key name="concierge-title"/>
+			<key name="concierge-subtitle"/>
+			<key name="concierge-top-language"/>
+			<key name="concierge-language">
+				<key name="1">
+					<key name="EN" />
+					<key name="DE" />
+					<key name="IT" />
+					<key name="FR" />					
+				</key>				
+			</key>
+			<key name="concierge-wpml-select"/>
+			<key name="concierge-login-option"/>
+			<key name="concierge-home-page-banner"/>
+			<key name="concierge-home-page-search"/>
+			<key name="concierge-home-page-slider">
+				<key name="1">
+					<key name="title" />
+					<key name="description" />
+					<key name="url" />
+					<key name="sort" />	
+					<key name="attachment_id" />
+					<key name="thumb" />
+					<key name="image" />	
+					<key name="height" />
+					<key name="width" />				
+				</key>				
+			</key>
+			<key name="concierge-login-option"/>
+			<key name="concierge-general-banner">
+				<key name="1">
+					<key name="url" />
+					<key name="height" />
+					<key name="width" />
+					<key name="thumbnail" />					
+				</key>				
+			</key>
+			<key name="concierge-product-banner">
+				<key name="1">
+					<key name="url" />
+					<key name="height" />
+					<key name="width" />
+					<key name="thumbnail" />					
+				</key>				
+			</key>
+			<key name="concierge-driver-banner">
+				<key name="1">
+					<key name="url" />
+					<key name="height" />
+					<key name="width" />
+					<key name="thumbnail" />					
+				</key>				
+			</key>
+			<key name="concierge-testimonial-banner">
+				<key name="1">
+					<key name="url" />
+					<key name="height" />
+					<key name="width" />
+					<key name="thumbnail" />					
+				</key>				
+			</key>
+			<key name="concierge-contact-banner">
+				<key name="1">
+					<key name="url" />
+					<key name="height" />
+					<key name="width" />
+					<key name="thumbnail" />					
+				</key>				
+			</key>
+			<key name="concierge-location-banner">
+				<key name="1">
+					<key name="url" />
+					<key name="height" />
+					<key name="width" />
+					<key name="thumbnail" />					
+				</key>				
+			</key>
+			<key name="concierge-partners-switch"/>
+			<key name="concierge-our-partners">
+				<key name="1">
+					<key name="title" />
+					<key name="description" />
+					<key name="url" />
+					<key name="sort" />	
+					<key name="attachment_id" />
+					<key name="thumb" />
+					<key name="image" />	
+					<key name="height" />
+					<key name="width" />				
+				</key>				
+			</key>
+			<key name="concierge-social-profile"/>
+			<key name="concierge-facebook-profile"/>
+			<key name="concierge-twitter-profile"/>
+			<key name="concierge-google-profile"/>
+			<key name="concierge-linkedin-profile"/>
+			<key name="concierge-pinterest-profile"/>
+			<key name="casa-select-search-page"/>
+
+			<key name="concierge-show-footer-widgets"/>
+			<key name="concierge-footer-widgets-icon">
+				<key name="1">
+					<key name="url" />
+					<key name="height" />
+					<key name="width" />
+					<key name="thumbnail" />					
+				</key>				
+			</key>
+
+			<key name="concierge-copyright-text"/>
+			<key name="concierge-powered-by"/>
+			<key name="concierge-company-link"/>
+			<key name="concierge-select-stylesheet"/>			
+			<key name="concierge-body-typography">
+				<key name="1">
+					<key name="font-family" />
+					<key name="font-options" />
+					<key name="google" />
+					<key name="font-backup" />
+					<key name="font-style" />
+					<key name="text-align" />	
+					<key name="line-height" />	
+					<key name="color" />					
+				</key>				
+			</key>
+			<key name="concierge-header-typography">
+				<key name="1">
+					<key name="font-family" />
+					<key name="font-options" />
+					<key name="google" />
+					<key name="font-backup" />
+					<key name="font-style" />
+					<key name="text-align" />	
+					<key name="line-height" />	
+					<key name="color" />					
+				</key>				
+			</key>
+			
+		</key>
+    </admin-texts>
+
+</wpml-config>

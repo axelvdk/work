@@ -1,0 +1,256 @@
+# Enable GZIP
+<ifmodule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/text text/html text/plain text/xml text/css application/x-javascript application/javascript
+BrowserMatch ^Mozilla/4 gzip-only-text/html
+BrowserMatch ^Mozilla/4\.0[678] no-gzip
+BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+</ifmodule>
+ 
+# Expires Headers - 2678400s = 31 days
+<ifmodule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 seconds"
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType image/gif "access plus 2678400 seconds"
+  ExpiresByType image/jpeg "access plus 2678400 seconds"
+  ExpiresByType image/png "access plus 2678400 seconds"
+  ExpiresByType text/css "access plus 518400 seconds"
+  ExpiresByType text/javascript "access plus 2678400 seconds"
+  ExpiresByType application/x-javascript "access plus 2678400 seconds"
+</ifmodule>
+ 
+
+# This .htaccess file is used to speed up this website
+# See https://github.com/sergeychernyshev/.htaccess
+
+
+# ----------------------------------------------------------------------
+# Proper MIME type for all files
+#
+# Copied from the HTML5 boilerplate project's .htaccess file
+# https://github.com/h5bp/html5-boilerplate/blob/master/.htaccess
+# ----------------------------------------------------------------------
+
+# JavaScript
+#   Normalize to standard type (it's sniffed in IE anyways)
+#   tools.ietf.org/html/rfc4329#section-7.2
+AddType	application/javascript			js jsonp
+AddType	application/json			json
+
+# Audio
+AddType	audio/ogg				oga ogg
+AddType	audio/mp4				m4a f4a f4b
+
+# Video
+AddType	video/ogg				ogv
+AddType	video/mp4				mp4 m4v f4v f4p
+AddType	video/webm				webm
+AddType	video/x-flv				flv
+
+# SVG
+#   Required for svg webfonts on iPad
+#   twitter.com/FontSquirrel/status/14855840545
+AddType		image/svg+xml			svg svgz
+AddEncoding	gzip				svgz
+
+# Webfonts
+AddType application/vnd.ms-fontobject		eot
+AddType application/x-font-ttf			ttf ttc
+AddType font/opentype				otf
+AddType application/x-font-woff			woff
+
+# Assorted types
+AddType	image/x-icon				ico
+AddType	image/webp				webp
+AddType	text/cache-manifest			appcache manifest
+AddType	text/x-component			htc
+AddType	application/xml				rss atom xml rdf
+AddType	application/x-chrome-extension		crx
+AddType	application/x-opera-extension		oex
+AddType	application/x-xpinstall			xpi
+AddType	application/octet-stream		safariextz
+AddType	application/x-web-app-manifest+json	webapp
+AddType	text/x-vcard				vcf
+AddType	application/x-shockwave-flash		swf
+AddType	text/vtt				vtt
+
+# --------------------------------------------------------------------------------------
+# Compression: http://code.google.com/speed/page-speed/docs/payload.html#GzipCompression
+# --------------------------------------------------------------------------------------
+<IfModule mod_deflate.c>
+	AddOutputFilterByType DEFLATE application/atom+xml
+	AddOutputFilterByType DEFLATE application/json
+	AddOutputFilterByType DEFLATE application/xhtml+xml
+	AddOutputFilterByType DEFLATE application/xml
+	AddOutputFilterByType DEFLATE text/css
+	AddOutputFilterByType DEFLATE text/html
+	AddOutputFilterByType DEFLATE text/plain
+	AddOutputFilterByType DEFLATE text/x-component
+	AddOutputFilterByType DEFLATE text/xml
+	
+	# The following MIME types are in the process of registration
+	AddOutputFilterByType DEFLATE application/xslt+xml
+	AddOutputFilterByType DEFLATE image/svg+xml
+	
+	# The following MIME types are NOT registered
+	AddOutputFilterByType DEFLATE application/mathml+xml
+	AddOutputFilterByType DEFLATE application/rss+xml
+	
+	# JavaScript has various MIME types
+	AddOutputFilterByType DEFLATE application/javascript
+	AddOutputFilterByType DEFLATE application/x-javascript
+	AddOutputFilterByType DEFLATE text/ecmascript
+	AddOutputFilterByType DEFLATE text/javascript
+
+	# .ico files and other compressible images
+	AddOutputFilterByType DEFLATE image/vnd.microsoft.icon
+	AddOutputFilterByType DEFLATE image/x-icon
+	AddOutputFilterByType DEFLATE image/bmp
+	AddOutputFilterByType DEFLATE image/tiff
+	AddOutputFilterByType DEFLATE application/pdf
+
+	# compressible fonts (.woff is already compressed)
+	AddOutputFilterByType DEFLATE font/opentype
+	AddOutputFilterByType DEFLATE application/x-font-ttf
+	AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+</IfModule>
+
+# ----------------------------------------------------------------------
+# Enabling filename rewriting (file.XXX.ext) if URL rewriting is enabled
+# Otherwise URLs will use query strings (file.ext?v=XXX)
+#
+# More proxies cache assets if there is no query string
+# ----------------------------------------------------------------------
+
+
+
+# -------------------------------------------------------------------------------------------------
+# Browser Caching: http://code.google.com/speed/page-speed/docs/caching.html#LeverageBrowserCaching
+#
+# Google recommends specifying the following for all cacheable resources:
+#
+#    1. Expires or Cache-Control max-age
+#
+# 	Set Expires to a minimum of one month, and preferably up to one year, in the future. (We
+# 	prefer Expires over Cache-Control: max-age because it is is more widely supported.) Do not
+# 	set it to more than one year in the future, as that violates the RFC guidelines.
+#
+#    2. Last-Modified or ETag
+#
+# 	Set the Last-Modified date to the last time the resource was changed. If the Last-Modified
+#	date is sufficiently far enough in the past, chances are the browser won't refetch it. 
+#
+# Per Google: "it is redundant to specify both Expires and Cache-Control: max-age, or to specify
+# both Last-Modified and ETag."
+# --------------------------------------------------------------------------------------------------
+<IfModule mod_expires.c>
+	ExpiresActive On
+
+	ExpiresByType application/json			"access plus 1 year"
+	ExpiresByType application/pdf			"access plus 1 year"
+	ExpiresByType application/x-shockwave-flash	"access plus 1 year"
+	ExpiresByType image/bmp 			"access plus 1 year"
+	ExpiresByType image/gif 			"access plus 1 year"
+	ExpiresByType image/jpeg 			"access plus 1 year"
+	ExpiresByType image/png 			"access plus 1 year"
+	ExpiresByType image/svg+xml 			"access plus 1 year"
+	ExpiresByType image/tiff 			"access plus 1 year"
+	ExpiresByType image/vnd.microsoft.icon 		"access plus 1 year"
+  	ExpiresByType image/x-icon			"access plus 1 year"
+	ExpiresByType text/css 				"access plus 1 year"
+	ExpiresByType video/x-flv 			"access plus 1 year"
+	ExpiresByType application/vnd.bw-fontobject	"access plus 1 year"
+	ExpiresByType application/x-font-ttf		"access plus 1 year"
+	ExpiresByType application/font-woff		"access plus 1 year"
+	ExpiresByType font/opentype			"access plus 1 year"
+	ExpiresByType image/webp			"access plus 1 year"
+
+	# The following MIME types are in the process of registration
+	ExpiresByType application/xslt+xml		"access plus 1 year"
+	ExpiresByType image/svg+xml			"access plus 1 year"
+
+	# The following MIME types are NOT registered
+	ExpiresByType application/mathml+xml		"access plus 1 year"
+	ExpiresByType application/rss+xml		"access plus 1 year"
+
+	# JavaScript has various MIME types
+	ExpiresByType application/x-javascript 		"access plus 1 year"
+	ExpiresByType application/javascript 		"access plus 1 year"
+	ExpiresByType text/ecmascript 			"access plus 1 year"
+	ExpiresByType text/javascript 			"access plus 1 year"
+</IfModule>
+
+# TODO: Set Last-Modified per Google's recommendation to complete browser caching
+
+# -------------------------------------------------------------------------
+# Disabling ETags as they are most likely misconfigured and
+# do not add functionalit beyond Last-Modified
+# -------------------------------------------------------------------------
+
+
+
+RewriteEngine On
+
+RewriteRule escorte-massage-tantrique-bruxelles-([A-Za-z]*)-([0-9]*) description.php?id_fille=$2 [L]
+
+
+
+RewriteRule ^escorte-massage-tantrique-bruxelles-test3-([0-9]+) /escorte-massage-bruxelles-test3.php?id_fille=$1 
+RewriteRule ^escorte-massage-tantrique-bruxelles-Valentina-([0-9]+) /escorte-massage-bruxelles-Valentina.php?id_fille=$1 
+RewriteRule ^escorte-massage-tantrique-bruxelles-Lola-([0-9]+) /escorte-massage-bruxelles-Lola.php?id_fille=$1 
+RewriteRule ^escorte-massage-tantrique-bruxelles-Lisa-([0-9]+) /escorte-massage-bruxelles-Lisa.php?id_fille=$1 
+RewriteRule ^escorte-massage-tantrique-bruxelles-Vera-([0-9]+) /escorte-massage-bruxelles-Vera.php?id_fille=$1 
+RewriteRule ^escorte-massage-tantrique-bruxelles-Karen-([0-9]+) /escorte-massage-bruxelles-Karen.php?id_fille=$1 
+RewriteRule ^escorte-massage-tantrique-bruxelles-Lula-([0-9]+) /escorte-massage-bruxelles-Lula.php?id_fille=$1 
+RewriteRule ^escorte-massage-tantrique-bruxelles-Tania-([0-9]+) /escorte-massage-bruxelles-Tania.php?id_fille=$1 
+RewriteRule ^escorte-massage-tantrique-bruxelles-Monica-([0-9]+) /escorte-massage-bruxelles-Monica.php?id_fille=$1 
+RewriteRule ^escorte-massage-tantrique-bruxelles-Vanille-([0-9]+) /escorte-massage-bruxelles-Vanille.php?id_fille=$1 
+RewriteRule ^escorte-massage-tantrique-bruxelles-Zoe-([0-9]+) /escorte-massage-bruxelles-Zoe.php?id_fille=$1 
+RewriteRule ^escorte-massage-tantrique-bruxelles-Claire-([0-9]+) /escorte-massage-bruxelles-Claire.php?id_fille=$1 
+RewriteRule ^escorte-massage-tantrique-bruxelles-Adele-([0-9]+) /escorte-massage-bruxelles-Adele.php?id_fille=$1 
+RewriteRule ^escorte-massage-tantrique-bruxelles-Yasmine-([0-9]+) /escorte-massage-bruxelles-Yasmine.php?id_fille=$1 
+RewriteRule ^escorte-massage-tantrique-bruxelles-Zina-([0-9]+) /escorte-massage-bruxelles-Zina.php?id_fille=$1 
+RewriteRule ^escorte-massage-tantrique-bruxelles-Nabila-([0-9]+) /escorte-massage-bruxelles-Nabila.php?id_fille=$1 
+RewriteRule ^escorte-massage-tantrique-bruxelles-Jessica-([0-9]+) /escorte-massage-bruxelles-Jessica.php?id_fille=$1 
+RewriteRule ^escorte-massage-tantrique-bruxelles-Sacha-([0-9]+) /escorte-massage-bruxelles-Sacha.php?id_fille=$1 
+RewriteRule ^escorte-massage-tantrique-bruxelles-Alice-([0-9]+) /escorte-massage-bruxelles-Alice.php?id_fille=$1 
+RewriteRule ^escorte-massage-tantrique-bruxelles-Maureen-([0-9]+) /escorte-massage-bruxelles-Maureen.php?id_fille=$1 
+RewriteRule ^escorte-massage-tantrique-bruxelles-Moon-([0-9]+) /escorte-massage-bruxelles-Moon.php?id_fille=$1 
+RewriteRule ^escorte-massage-tantrique-bruxelles-Giovanna-([0-9]+) /escorte-massage-bruxelles-Giovanna.php?id_fille=$1 
+RewriteRule ^escorte-massage-tantrique-bruxelles-Cristina-([0-9]+) /escorte-massage-bruxelles-Cristina.php?id_fille=$1 
+RewriteRule ^escorte-massage-tantrique-bruxelles-Jade-([0-9]+) /escorte-massage-bruxelles-Jade.php?id_fille=$1 
+RewriteRule ^escorte-massage-tantrique-bruxelles-Sofia-([0-9]+) /escorte-massage-bruxelles-Sofia.php?id_fille=$1 
+RewriteRule ^escorte-massage-tantrique-bruxelles-Penelope-([0-9]+) /escorte-massage-bruxelles-Penelope.php?id_fille=$1 
+RewriteRule ^escorte-massage-tantrique-bruxelles-Debora-([0-9]+) /escorte-massage-bruxelles-Debora.php?id_fille=$1 
+RewriteRule ^escorte-massage-tantrique-bruxelles-Lydia-([0-9]+) /escorte-massage-bruxelles-Lydia.php?id_fille=$1 
+RewriteRule ^escorte-massage-tantrique-bruxelles-Andrea-([0-9]+) /escorte-massage-bruxelles-Andrea.php?id_fille=$1 
+RewriteRule ^escorte-massage-tantrique-bruxelles-Nuria-([0-9]+) /escorte-massage-bruxelles-Nuria.php?id_fille=$1 
+RewriteRule ^escorte-massage-tantrique-bruxelles-Isa-([0-9]+) /escorte-massage-bruxelles-Isa.php?id_fille=$1 
+RewriteRule ^escorte-massage-tantrique-bruxelles-Lauren-([0-9]+) /escorte-massage-bruxelles-Lauren.php?id_fille=$1 
+RewriteRule ^escorte-massage-tantrique-bruxelles-Katia-([0-9]+) /escorte-massage-bruxelles-Katia.php?id_fille=$1 
+RewriteRule ^escorte-massage-tantrique-bruxelles-Stefania-([0-9]+) /escorte-massage-bruxelles-Stefania.php?id_fille=$1 
+RewriteRule ^escorte-massage-tantrique-bruxelles-Rihanna-([0-9]+) /escorte-massage-bruxelles-Rihanna.php?id_fille=$1 
+RewriteRule ^escorte-massage-tantrique-bruxelles-Yasmine-([0-9]+) /escorte-massage-bruxelles-Yasmine.php?id_fille=$1 
+RewriteRule ^escorte-massage-tantrique-bruxelles-Vera-([0-9]+) /escorte-massage-bruxelles-Vera.php?id_fille=$1 
+RewriteRule ^escorte-massage-tantrique-bruxelles-Kelly-([0-9]+) /escorte-massage-bruxelles-Kelly.php?id_fille=$1 
+RewriteRule ^escorte-massage-tantrique-bruxelles-Suzan-([0-9]+) /escorte-massage-bruxelles-Suzan.php?id_fille=$1 
+RewriteRule ^escorte-massage-tantrique-bruxelles-Carolina-([0-9]+) /escorte-massage-bruxelles-Carolina.php?id_fille=$1 
+RewriteRule ^escorte-massage-tantrique-bruxelles-Ruby-([0-9]+) /escorte-massage-bruxelles-Ruby.php?id_fille=$1 
+RewriteRule ^escorte-massage-tantrique-bruxelles-Adelina-([0-9]+) /escorte-massage-bruxelles-Adelina.php?id_fille=$1 
+
+RewriteRule ^escorte-massage-tantrique-bruxelles-Helena-([0-9]+) /escorte-massage-bruxelles-Helena.php?id_fille=$1 
+RewriteRule ^escorte-massage-tantrique-bruxelles-Deborah-([0-9]+) /escorte-massage-bruxelles-Deborah.php?id_fille=$1 
+RewriteRule ^escorte-massage-tantrique-bruxelles-Nina-([0-9]+) /escorte-massage-bruxelles-Nina.php?id_fille=$1 
+RewriteRule ^escorte-massage-tantrique-bruxelles-Carmen-([0-9]+) /escorte-massage-bruxelles-Carmen.php?id_fille=$1 
+RewriteRule ^escorte-massage-tantrique-bruxelles-Sylvia-([0-9]+) /escorte-massage-bruxelles-Sylvia.php?id_fille=$1 
+RewriteRule ^escorte-massage-tantrique-bruxelles-Shania-([0-9]+) /escorte-massage-bruxelles-Shania.php?id_fille=$1 
+RewriteRule ^escorte-massage-tantrique-bruxelles-Paola-([0-9]+) /escorte-massage-bruxelles-Paola.php?id_fille=$1 
+RewriteRule ^escorte-massage-tantrique-bruxelles-Ruby-([0-9]+) /escorte-massage-bruxelles-Ruby.php?id_fille=$1 
+RewriteRule ^escorte-massage-tantrique-bruxelles-Yasmine-([0-9]+) /escorte-massage-bruxelles-Yasmine.php?id_fille=$1 
+RewriteRule ^escorte-massage-tantrique-bruxelles-Sabrina-([0-9]+) /escorte-massage-bruxelles-Sabrina.php?id_fille=$1 
+RewriteRule ^escorte-massage-tantrique-bruxelles-Sybelle-([0-9]+) /escorte-massage-bruxelles-Sybelle.php?id_fille=$1 
+RewriteRule ^escorte-massage-tantrique-bruxelles-Sofia-([0-9]+) /escorte-massage-bruxelles-Sofia.php?id_fille=$1 
+RewriteRule ^escorte-massage-tantrique-bruxelles-Lula-([0-9]+) /escorte-massage-bruxelles-Lula.php?id_fille=$1 
+RewriteRule ^escorte-massage-tantrique-bruxelles-Olivia-([0-9]+) /escorte-massage-bruxelles-Olivia.php?id_fille=$1 
+RewriteRule ^escorte-massage-tantrique-bruxelles-Katie-([0-9]+) /escorte-massage-bruxelles-Katie.php?id_fille=$1 
+RewriteRule ^escorte-massage-tantrique-bruxelles-Bella-([0-9]+) /escorte-massage-bruxelles-Bella.php?id_fille=$1 

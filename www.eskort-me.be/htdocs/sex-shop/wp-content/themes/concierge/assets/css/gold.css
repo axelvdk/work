@@ -1,0 +1,236 @@
+.overlay-shadow,
+.member .member-social { background: rgba(188, 180, 157, 0.8); }
+
+.btn.light:hover {
+  color: #bcb49d;
+}
+
+.btn.dark {
+  color: #bcb49d;
+  border-color: #bcb49d;
+}
+
+.btn.dark:hover {
+  background-color: #bcb49d;
+  color: #fff;
+}
+
+#back-to-top {
+  background-color: #bcb49d;
+}
+
+#toggle {
+  background: #433f37;
+}
+
+#header .header-tool-bar {
+  background: rgba(67, 63, 55, 0.6);
+}
+
+#header .header-tool-bar .container {
+  background: rgba(67, 63, 55, 0.6);
+  border: 1px solid rgba(67, 63, 55, 0.6);
+  border-width: 0 0px;
+}
+
+#header .header-tool-bar .container:before {
+  border-right-color: rgba(67, 63, 55, 0.6);
+}
+
+#header .header-tool-bar .container:after {
+  border-left-color: rgba(67, 63, 55, 0.6);
+}
+
+#header.triangle .header-logo:after {
+  border-color: #bcb49d transparent transparent transparent;
+}
+
+#header .header-contact li:before,
+#header .header-login {
+  border-color: rgba(255,255,255,0.3);
+}
+
+#header .header-login form {
+  background: rgba(67, 63, 55, 0.6);
+}
+
+#header .header-language li > a {
+  background: rgba(67, 63, 55, 0.6);
+}
+
+#header .header-language li.active,
+#header .header-language li:hover > a {
+  border-top: 1px solid #433f37;
+  background: #433f37;
+}
+
+#header .header-nav ul li a:hover,
+#header .header-nav ul li a.active,
+#header .header-nav .has-submenu.hover > a,
+#header .breadcrumbs li a:hover { color: #e0d6c7; }
+
+#header .breadcrumbs li a:before { color: #bcb49d}
+
+.header-preamble .logo {background-color: #bcb49d;}
+
+.banner-search .tab-title,
+.banner-search .tab-content-list { background: rgba(67, 63, 55, 0.7); }
+
+.banner-search .departure-input,
+.banner-search .people,
+.banner-search .model.select-box,
+.banner-search .where-input,
+.banner-search .submit-btn,
+.booking .heading {
+  border-color: rgba(255,255,255,0.1);
+}
+
+.booking .default-form { background: #bcb49d; }
+
+#essentials .tab-title.active,
+#essentials .tab-title:hover { background-color: #bcb49d;}
+
+#essentials .tab-content-list { border-color: #bcb49d; }
+
+#essentials .fleet-filters li a.active { background-color: #bcb49d; }
+
+#essentials li cite { border-color: #bcb49d;}
+
+.fleets .fleets-filters-title { background-color: #bcb49d; }
+
+.default-form .radio-input label:before { box-shadow: 0 0 0 1px #bcb49d; }
+
+.default-form .checkbox-input label:before { 
+  color: #bcb49d; 
+  border: 1px solid #bcb49d;
+}
+
+.fleets .select-box .select-clone { background-color: rgba(67, 63, 55, 0.8); }
+
+.default-form .radio-input.active label:before { background-color: #bcb49d; }
+
+.fleets .fleets-search-filter .slider-range .ui-slider-range {background-color: #bcb49d;}
+
+.fleets .fleets-search-filter .slider-range .ui-slider-handle { background-color: #433f37; }
+
+.drivers .driver-profile .overlay-shadow { background-color: rgba(67, 63, 55, 0.8) }
+
+.customers .customer-testimonial .logo { background-color: #bcb49d;}
+
+.post .post-meta i { color: #bcb49d; }
+
+.widget .search-form input {
+  background: rgba(30, 46, 66, 0.10);
+  color:#5A5443;
+}
+
+.widget .search-form input:-ms-input-placeholder { color:#5A5443; }
+
+.widget .search-form input::-webkit-input-placeholder { color:#5A5443; }
+
+.widget .search-form input:-moz-placeholder {
+   color:#5A5443;
+   opacity: 1;
+}
+
+.widget .search-form input::-moz-placeholder {
+   color:#5A5443;
+   opacity: 1;
+}
+
+.widget .list a,
+.widget .list li a:before,
+.widget .tags-list li a,
+.single-post .tags-list li a { color: #bcb49d;}
+
+.widget .search-form button { color:#bcb49d; }
+
+.single-post .post-addcomment input,
+.single-post .post-addcomment textarea { color:#5A5443; }
+
+.single-post .post-addcomment input:-ms-input-placeholder,
+.single-post .post-addcomment textarea:-ms-input-placeholder { color:#5A5443; }
+
+.single-post .post-addcomment input::-webkit-input-placeholder,
+.single-post .post-addcomment textarea::-webkit-input-placeholder { color:#5A5443; }
+
+.single-post .post-addcomment input:-moz-placeholder,
+.single-post .post-addcomment textarea:-moz-placeholder {
+   color:#5A5443;
+   opacity: 1;
+}
+
+.contact-map.style-1 .contact-info {
+  background-color: rgba(188, 180, 157, 0.85);
+}
+
+.contact-map.style-1 .contact-info:before {
+  border-color: transparent transparent rgba(188, 180, 157, 0.85) transparent;
+}
+
+.contact-map.style-1 .contact-form input,
+.contact-map.style-1 .contact-form textarea {
+  color:#5A5443;
+  background: rgba(30, 46, 66, 0.11);
+}
+
+.contact-map.style-1 .contact-form input:-ms-input-placeholder,
+.contact-map.style-1 .contact-form textarea:-ms-input-placeholder { color:#5A5443; }
+
+.contact-map.style-1 .contact-form input::-webkit-input-placeholder,
+.contact-map.style-1 .contact-form textarea::-webkit-input-placeholder { color:#5A5443; }
+
+.contact-map.style-1 .contact-form input:-moz-placeholder,
+.contact-map.style-1 .contact-form textarea:-moz-placeholder {
+   color:#5A5443;
+   opacity: 1;
+}
+
+.contact-map.style-2 .contact-form {
+  background-color: rgba(90, 84, 67, 0.9);
+}
+
+.testimonials .video_gradient { background: rgba(67, 63, 55, 0.6); }
+
+.testimonials blockquote:after { color: #c8c8c8;}
+
+.tabs-navigation .tab-title-list li h5,
+.tabs-content .tab-content-list h5 { color: #bcb49d; }
+
+.tabs-content .tab-content-list li .heading { border-color: #bcb49d;}
+
+.package-label {background-color: #bcb49d;}
+
+.radial-progress-bar .loader-spiner { border-color: #bcb49d;}
+
+table th { background-color: #bcb49d; }
+
+.ui-datepicker { background-color: rgba(67, 63, 55, 0.6); }
+
+.ui-datepicker-header ,
+.ui-datepicker-calendar td { background-color: rgba(188, 180, 157, 0.5); }
+
+.ui-datepicker-calendar td:hover { background-color: rgba(188, 180, 157, 1); }
+
+.ui-datepicker-calendar td span { color: #e0d6c7; }
+
+#footer { background-color: #433f37;}
+
+#footer .widget-news ul,
+#footer .widget-news li { border-color: rgba(255,255,255,0.1);}
+
+#footer .footer-copyrights { background-color: #2e2c27;}
+
+
+@media (max-width: 991px) {
+  #header .header-tool-bar,
+  #header .header-nav,
+  #header .header-language .header-form ul li a,
+  #header .header-nav .has-submenu li {
+    background-color: #433f37;
+  }
+
+  #header .header-nav .has-submenu li > a:hover {
+    color: #e0d6c7;
+  }
+}

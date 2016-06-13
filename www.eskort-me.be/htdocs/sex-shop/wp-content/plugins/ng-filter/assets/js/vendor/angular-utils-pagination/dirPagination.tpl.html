@@ -1,0 +1,14 @@
+<ul class="pagination custom-list fleets-listing-pagination" ng-if="1 < pages.length">
+    
+    <li lass="prev" ng-if="directionLinks" ng-class="{ disabled : pagination.current == 1 }" class="ng-scope">
+        <a href="" ng-click="setCurrent(pagination.current - 1)" class="ng-binding">Previous</a>
+    </li>
+    <li class="number" ng-repeat="pageNumber in pages track by $index" ng-class="{ active : pagination.current == pageNumber, disabled : pageNumber == '...' }">
+        <a href="" ng-click="setCurrent(pageNumber)">{{ pageNumber }}</a>
+    </li>
+
+    <li class="next" ng-if="directionLinks" ng-class="{ disabled : pagination.current == pagination.last }" class="ng-scope">
+        <a href="" ng-click="setCurrent(pagination.current + 1)" class="ng-binding">Next</a>
+    </li>
+
+</ul>

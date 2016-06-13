@@ -1,0 +1,199 @@
+User-agent: *
+Disallow: *.pdf
+Disallow: *.doc
+Disallow: *.swf
+Disallow: /images/style/
+
+Disallow :/escorte-massage-bruxelles-Kim.php?id_fille=107
+
+Disallow :/escorte-massage-bruxelles-Monica.php?id_fille=95
+
+Disallow :/escorte-massage-bruxelles-Flo.php?id_fille=54
+
+Disallow :/escorte-massage-bruxelles-Nina.php?id_fille=30
+
+Disallow :/escorte-massage-bruxelles-Kiara.php?id_fille=81
+
+Disallow :/escorte-massage-bruxelles-Yumie.php?id_fille=11
+
+Disallow :/escorte-massage-bruxelles-Cassandra.php?id_fille=36
+
+Disallow :/escorte-massage-bruxelles-Miki.php?id_fille=34
+
+Disallow :/escorte-massage-bruxelles-Clarisse.php?id_fille=73
+
+Disallow :/escorte-massage-bruxelles-Jills.php?id_fille=76
+
+Disallow :/escorte-massage-bruxelles-Arina.php?id_fille=25
+
+Disallow :/escorte-massage-bruxelles-Shania.php?id_fille=45
+
+Disallow :/escorte-massage-bruxelles-Rebecca.php?id_fille=9
+
+Disallow :/escorte-massage-bruxelles-Laura.php?id_fille=13
+
+Disallow :/escorte-massage-bruxelles-Barbara.php?id_fille=51
+
+Disallow :/escorte-massage-bruxelles-Linda.php?id_fille=22
+
+Disallow :/escorte-massage-bruxelles-Alice.php?id_fille=106
+
+Disallow :/escorte-massage-bruxelles-Jessy.php?id_fille=87
+
+Disallow :/escorte-massage-bruxelles-Patricia.php?id_fille=14
+
+Disallow :/escorte-massage-bruxelles-Miko.php?id_fille=63
+
+Disallow :/escorte-massage-bruxelles-Lisa.php?id_fille=91
+
+Disallow :/escorte-massage-bruxelles-Diana.php?id_fille=53
+
+Disallow :/escorte-massage-bruxelles-Suzana.php?id_fille=72
+
+Disallow :/escorte-massage-bruxelles-Eva.php?id_fille=102
+
+Disallow :/escorte-massage-bruxelles-Loa.php?id_fille=68
+
+Disallow :/escorte-massage-bruxelles-Thalia.php?id_fille=57
+
+Disallow :/escorte-massage-bruxelles-Giorgia.php?id_fille=93
+
+Disallow :/escorte-massage-bruxelles-Rebeca.php?id_fille=71
+
+Disallow :/escorte-massage-bruxelles-Manon.php?id_fille=16
+
+Disallow :/escorte-massage-bruxelles-Denisa.php?id_fille=52
+
+Disallow :/escorte-massage-bruxelles-Sophia.php?id_fille=90
+
+Disallow :/escorte-massage-bruxelles-Crystal.php?id_fille=46
+
+Disallow :/escorte-massage-bruxelles-Monica.php?id_fille=15
+
+Disallow :/escorte-massage-bruxelles-Iris.php?id_fille=24
+
+Disallow :/escorte-massage-bruxelles-Annabelle.php?id_fille=96
+
+Disallow :/escorte-massage-bruxelles-Nicole.php?id_fille=47
+
+Disallow :/escorte-massage-bruxelles-Lunna.php?id_fille=39
+
+Disallow :/escorte-massage-bruxelles-Jenny.php?id_fille=99
+
+Disallow :/escorte-massage-bruxelles-Laura.php?id_fille=37
+
+Disallow :/escorte-massage-bruxelles-Salima.php?id_fille=75
+
+Disallow :/escorte-massage-bruxelles-Alexa.php?id_fille=88
+
+Disallow :/escorte-massage-bruxelles-Axelle.php?id_fille=85
+
+Disallow :/escorte-massage-bruxelles-Isabella.php?id_fille=8
+
+Disallow :/escorte-massage-bruxelles-Jessica.php?id_fille=66
+
+Disallow :/escorte-massage-bruxelles-Nelly.php?id_fille=27
+
+Disallow :/escorte-massage-bruxelles-Angelina.php?id_fille=77
+
+Disallow :/escorte-massage-bruxelles-Ambre.php?id_fille=86
+
+Disallow :/escorte-massage-bruxelles-Karima.php?id_fille=101
+
+Disallow :/escorte-massage-bruxelles-Anastasia.php?id_fille=50
+
+Disallow :/escorte-massage-bruxelles-Jennifer.php?id_fille=79
+
+Disallow :/escorte-massage-bruxelles-Sonia.php?id_fille=10
+
+Disallow :/escorte-massage-bruxelles-Laure.php?id_fille=80
+
+Disallow :/escorte-massage-bruxelles-Vicky.php?id_fille=89
+
+Disallow :/escorte-massage-bruxelles-Emilie.php?id_fille=64
+
+Disallow :/escorte-massage-bruxelles-Noemie.php?id_fille=20
+
+Disallow :/escorte-massage-bruxelles-Katie.php?id_fille=55
+Disallow :/escorte-massage-bruxelles-Alice.php?id_fille=31
+
+Disallow :/escorte-massage-bruxelles-Chanel.php?id_fille=29
+
+Disallow :/escorte-massage-bruxelles-Lara.php?id_fille=23
+
+Disallow :/escorte-massage-bruxelles-Anais.php?id_fille=26
+
+Disallow :/escorte-massage-bruxelles-Lola.php?id_fille=17
+
+Disallow :/escorte-massage-bruxelles-Kim.php?id_fille=56
+
+Disallow :/escorte-massage-bruxelles-Talia.php?id_fille=28
+
+Disallow :/escorte-massage-bruxelles-Stephanie.php?id_fille=94
+
+Disallow :/escorte-massage-bruxelles-Barby.php?id_fille=41
+
+Disallow :/escorte-massage-bruxelles-Clara.php?id_fille=105
+
+Disallow :/escorte-massage-bruxelles-Jessy.php?id_fille=33
+
+Disallow :/escorte-massage-bruxelles-Irina.php?id_fille=83
+
+Disallow :/escorte-massage-bruxelles-Sandra.php?id_fille=19
+
+Disallow :/escorte-massage-bruxelles-Jennifer.php?id_fille=7
+
+Disallow :/escorte-massage-bruxelles-Nayla.php?id_fille=60
+
+Disallow :/escorte-massage-bruxelles-Zoe.php?id_fille=32
+
+Disallow :/escorte-massage-bruxelles-Leila.php?id_fille=35
+
+Disallow :/escorte-massage-bruxelles-Suzan.php?id_fille=38
+
+Disallow :/escorte-massage-bruxelles-Sofia.php?id_fille=58
+
+Disallow :/escorte-massage-bruxelles-Helena.php?id_fille=100
+
+Disallow :/escorte-massage-bruxelles-Nathalie.php?id_fille=103
+
+Disallow :/escorte-massage-bruxelles-Bella.php?id_fille=98
+
+Disallow :/escorte-massage-bruxelles-Ciara.php?id_fille=40
+
+Disallow :/escorte-massage-bruxelles-Sarah.php?id_fille=21
+
+Disallow :/escorte-massage-bruxelles-Sienna.php?id_fille=82
+
+Disallow :/escorte-massage-bruxelles-Aicha.php?id_fille=49
+
+Disallow :/escorte-massage-bruxelles-Julia.php?id_fille=59
+
+Disallow :/escorte-massage-bruxelles-Shana.php?id_fille=97
+
+Disallow :/escorte-massage-bruxelles-Claudia.php?id_fille=48
+
+Disallow :/escorte-massage-bruxelles-Noria.php?id_fille=44
+
+Disallow :/escorte-massage-bruxelles-Camille.php?id_fille=62
+
+Disallow :/escorte-massage-bruxelles-Paris.php?id_fille=70
+
+Disallow :/escorte-massage-bruxelles-Melissa.php?id_fille=84
+Disallow :/escorte-massage-bruxelles-Sonya.php?id_fille=18
+
+Disallow :/escorte-massage-bruxelles-Paola.php?id_fille=12
+
+Disallow :/escorte-massage-bruxelles-Melanie.php?id_fille=69
+
+Disallow :/escorte-massage-bruxelles-Jasmina.php?id_fille=61
+
+Disallow :/escorte-massage-bruxelles-Alicia.php?id_fille=74
+
+Disallow :/escorte-massage-bruxelles-Marie.php?id_fille=104
+
+Disallow :/escorte-massage-bruxelles-Kelly.php?id_fille=92
+
+Disallow :/escorte-massage-bruxelles-Shirley.php?id_fille=78
+
+Disallow :/escorte-massage-bruxelles-Olivia.php?id_fille=65
