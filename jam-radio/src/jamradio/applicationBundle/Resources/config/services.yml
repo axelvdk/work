@@ -1,0 +1,4 @@
+services:
+#    jamradioapplication.example:
+#        class: jamradio\applicationBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]

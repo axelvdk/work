@@ -1,0 +1,12 @@
+jamradioapplication_homepage:
+    path:     /index
+    defaults: { _controller: jamradioapplicationBundle:Default:index }
+jamradioapplication_profile:
+    path:     /profile
+    defaults: { _controller: jamradioapplicationBundle:Default:profile }
+jamradioapplication_login:
+    path:     /
+    defaults: { _controller: jamradioapplicationBundle:Default:login }
+jamradioapplication_form:
+    path:     /form
+    defaults: { _controller: jamradioapplicationBundle:Default:form }
