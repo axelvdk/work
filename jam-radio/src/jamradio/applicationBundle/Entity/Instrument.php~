@@ -94,3 +94,4 @@ class Instrument
         return $this->type;
     }
 }
+

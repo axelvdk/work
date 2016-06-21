@@ -5,6 +5,7 @@ namespace jamradio\applicationBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 class UserType extends AbstractType
 {
@@ -16,13 +17,15 @@ class UserType extends AbstractType
     {
         $builder
             ->add('name')
-            ->add('firstname')
-            ->add('age', 'datetime')
             ->add('email')
             ->add('password')
+            ->add('firstname')
+            ->add('description')
             ->add('instruments')
             ->add('styles')
             ->add('bands')
+            ->add('save', SubmitType::class, array(
+                'attr' => array('class' => 'save')))
         ;
     }
 

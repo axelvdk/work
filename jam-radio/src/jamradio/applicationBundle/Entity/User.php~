@@ -59,12 +59,17 @@ class User
     private $firstname;
 
     /**
+     * @var text
+     *
+     * @ORM\Column(name="description",type="text",nullable=true)
+     */
+    private $description;
+    /**
      * @var \DateTime
      *
      * @ORM\Column(name="age",type="datetime",nullable=true)
      */
     private $age;
-
 
     /**
      * Get id

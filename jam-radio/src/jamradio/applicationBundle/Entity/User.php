@@ -59,12 +59,17 @@ class User
     private $firstname;
 
     /**
+     * @var text
+     *
+     * @ORM\Column(name="description",type="text",nullable=true)
+     */
+    private $description;
+    /**
      * @var \DateTime
      *
      * @ORM\Column(name="age",type="datetime",nullable=true)
      */
     private $age;
-
 
     /**
      * Get id
@@ -305,5 +310,29 @@ class User
     public function getPassword()
     {
         return $this->password;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     *
+     * @return User
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
     }
 }

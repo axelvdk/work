@@ -4,11 +4,13 @@ namespace jamradio\applicationBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use jamradio\applicationBundle\Entity\User;
+use jamradio\applicationBundle\Form\UserType;
 use jamradio\applicationBundle\Repository\UserRepository;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
+use Symfony\Component\Form\Extension\Core\Type\ButtonType;
 use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\HttpFoundation\Session\Storage\MockFileSessionStorage;
 
@@ -18,13 +20,31 @@ class DefaultController extends Controller
     {
        $session = new Session(new MockFileSessionStorage());
 
-        return $this->render('jamradioapplicationBundle:Default:index.html.twig', array(
+       return $this->render('jamradioapplicationBundle:Default:index.html.twig', array(
             'id_user'=>$session->get('id'),
-          ));
+       ));
     }
-    public function profileAction()
+
+    public function profileAction(Request $request)
     {
-        return $this->render('jamradioapplicationBundle:Default:user-profile.html.twig');
+        $user = new User();
+        $form = $this->createForm(UserType::class, $user);
+
+        $form->handleRequest($request);
+        
+
+        if ($form->isSubmitted()) {
+
+          $em = $this->getDoctrine()->getManager();
+
+          $em->persist($user);
+          $em->flush();
+          return $this->redirectToRoute('jamradioapplication_homepage');
+        }
+
+        return $this->render('jamradioapplicationBundle:Default:user-profile.html.twig',array(
+          'form'=>$form->createView(),
+        ));
     }
 
     public function loginAction(Request $request)
@@ -36,7 +56,7 @@ class DefaultController extends Controller
          ->getDoctrine()
          ->getRepository('jamradioapplicationBundle:User');
 
-      $form = $this->createFormBuilder($user)
+         $form = $this->createFormBuilder($user)
           ->add('email', TextType::class)
           ->add('password', PasswordType::class)
           ->add('save', SubmitType::class, array('label' => 'Login'))

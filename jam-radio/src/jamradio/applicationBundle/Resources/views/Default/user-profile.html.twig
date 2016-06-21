@@ -65,7 +65,7 @@
    <link href="{{ asset('social-1/css/app/sidebar-skins.css') }}" rel="stylesheet" />
    <link href="{{ asset('social-1/css/app/navbar.css') }}" rel="stylesheet" />
    <link href="{{ asset('social-1/css/app/media.css') }}" rel="stylesheet" />
-   <link href="{{ asset('social-1/css/app/player.css') }}" rel="stylesheet" />
+   <!--<link href="{{ asset('social-1/css/app/player.css') }}" rel="stylesheet" />-->
    <link href="{{ asset('social-1/css/app/timeline.css') }}" rel="stylesheet" />
    <link href="{{ asset('social-1/css/app/cover.css') }}" rel="stylesheet" />
    <link href="{{ asset('social-1/css/app/chat.css') }}" rel="stylesheet" />
@@ -77,7 +77,7 @@
    <link href="{{ asset('social-1/css/app/colors-calendar.css') }}" rel="stylesheet" />
    <link href="{{ asset('social-1/css/app/colors-progress-bars.css') }}" rel="stylesheet" />
    <link href="{{ asset('social-1/css/app/colors-text.css') }}" rel="stylesheet" />
-   <link href="{{ asset('social-1/css/app/ui.css') }}" rel="stylesheet" />
+   <!--<link href="{{ asset('social-1/css/app/ui.css') }}" rel="stylesheet" />-->
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
   WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -99,40 +99,105 @@
       <div class="row">
         <div class="col-md-10 col-lg-8 col-md-offset-1 col-lg-offset-2">
 
-
-
           <h4 class="page-section-heading">Basic example</h4>
           <div class="panel panel-default">
             <div class="panel-body">
               <form>
+                {{ form_start(form,{'action': path('jamradioapplication_profile'), 'method': 'POST'} ) }}
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group form-control-default">
-                      <label for="exampleInputFirstName">First name</label>
-                      <input type="email" class="form-control" id="exampleInputFirstName" placeholder="Your first name">
-                    </div>
+                      <!--
+                        <label for="exampleInputFirstName">First name</label>
+                        <input type="email" class="form-control" id="exampleInputFirstName" placeholder="Your first name">
+                       -->
+                       {{ form_widget(form.name, {'attr': {'placeholder':'Name'}} ) }}
+                  </div>
                   </div>
 
                   <div class="col-md-6">
                     <div class="form-group form-control-default">
+                    <!--
                       <label for="exampleInputLastName">Last name</label>
                       <input type="email" class="form-control" id="exampleInputLastName" placeholder="Your last name">
+                    -->
+                    {{ form_widget(form.firstname, {'attr': {'placeholder':'Firstname'}} ) }}
                     </div>
                   </div>
                   <div class="form-group ">
-                    
+                    <!--
                     <textarea class="form-control" name="descriptionName" rows="5" placeholder="Description"></textarea>
+                  -->
+                  {{ form_widget(form.description, {'attr':{ 'placeholder':'Description'}} ) }}
+
                   </div>
                 </div>
                 <div class="form-group form-control-default required">
+                  <div class="form-group margin-none">
+                    <label class="col-sm-3 control-label">Instruments</label>
+                    <div class="col-sm-9">
+                      {{ form_widget(form.instruments, {'attr': {'class':'selectpicker','multiple data-style':'btn-white'}} ) }}
+                    <!--
+                    <select class="selectpicker" multiple data-style="btn-white" title='Choose one of the following...'>
+                        <option>Mustard</option>
+                        <option>Ketchup</option>
+                        <option>Relish</option>
+                      </select>
+                    -->
+
+                    </div>
+                  </div>
+                  </div>
+                  <div class="form-group form-control-default required">
+                    <div class="form-group margin-none">
+                      <label class="col-sm-3 control-label">Styles</label>
+                      <div class="col-sm-9">
+                        {{ form_widget(form.styles, {'attr': {'class':'selectpicker','multiple data-style':'btn-white'}} ) }}
+                      <!--
+                      <select class="selectpicker" multiple data-style="btn-white" title='Choose one of the following...'>
+                          <option>Mustard</option>
+                          <option>Ketchup</option>
+                          <option>Relish</option>
+                        </select>
+                      -->
+
+                      </div>
+                    </div>
+                    </div>
+                    <div class="form-group form-control-default required">
+                      <div class="form-group margin-none">
+                        <label class="col-sm-3 control-label">Bands</label>
+                        <div class="col-sm-9">
+                          {{ form_widget(form.bands, {'attr': {'class':'selectpicker','multiple data-style':'btn-white'}} ) }}
+                        <!--
+                        <select class="selectpicker" multiple data-style="btn-white" title='Choose one of the following...'>
+                            <option>Mustard</option>
+                            <option>Ketchup</option>
+                            <option>Relish</option>
+                          </select>
+                        -->
+
+                        </div>
+                      </div>
+                      </div>
+                <!--
                   <label for="exampleInputEmail1">Email address</label>
                   <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                </div>
+                -->
+                 {{ form_widget(form.email, {'attr':{ 'placeholder':'Email'}} ) }}
                 <div class="form-group form-control-default required">
+                  <!--
                   <label for="exampleInputPassword1">Password</label>
                   <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                </div>
+                -->
+                {{ form_widget(form.password, {'attr': {'placeholder':'Password'}} ) }}
+              </div>
+              <!--
                 <button type="submit" class="btn btn-primary">Submit</button>
+              -->
+
+                {{ form_widget(form.save, {'attr': {'value':'Submit', 'class':'btn btn-primary'}} ) }}
+                {{ form_end(form) }}
               </form>
             </div>
           </div>
@@ -187,10 +252,10 @@
           The bundle was generated using modern frontend development tools that are provided with the package
           To learn more about the development process, please refer to the documentation.
           Do not use it simultaneously with the separate bundles above. -->
-        <script src="{{ asset('social-1/js/vendor/all.js') }}"></script>
+        <!--<script src="{{ asset('social-1/js/vendor/all.js') }}"></script>-->
 
         <!-- Vendor Scripts Standalone Libraries -->
-         <script src="{{ asset('social-1/js/vendor/core/all.js') }}"></script>
+      <!--   <script src="{{ asset('social-1/js/vendor/core/all.js') }}"></script>-->
          <script src="{{ asset('social-1/js/vendor/core/jquery.js') }}"></script>
          <script src="{{ asset('social-1/js/vendor/core/bootstrap.js') }}"></script>
          <script src="{{ asset('social-1/js/vendor/core/breakpoints.js') }}"></script>
@@ -205,19 +270,19 @@
          <script src="{{ asset('social-1/js/vendor/core/jquery.hotkeys.js') }}"></script>
          <script src="{{ asset('social-1/js/vendor/core/load_image.js') }}"></script>
          <script src="{{ asset('social-1/js/vendor/core/jquery.debouncedresize.js') }}"></script>
-         <script src="{{ asset('social-1/js/vendor/tables/all.js') }}"></script>
+      <!--   <script src="{{ asset('social-1/js/vendor/tables/all.js') }}"></script>
          <script src="{{ asset('social-1/js/vendor/forms/all.js') }}"></script>
          <script src="{{ asset('social-1/js/vendor/media/all.js') }}"></script>
          <script src="{{ asset('social-1/js/vendor/player/all.js') }}"></script>
          <script src="{{ asset('social-1/js/vendor/charts/all.js') }}"></script>
-         <script src="{{ asset('social-1/js/vendor/charts/flot/all.js') }}"></script>
+         <script src="{{ asset('social-1/js/vendor/charts/flot/all.js') }}"></script>-->
          <script src="{{ asset('social-1/js/vendor/charts/easy-pie/jquery.easypiechart.js') }}"></script>
-         <script src="{{ asset('social-1/js/vendor/charts/morris/all.js') }}"></script>
+        <!-- <script src="{{ asset('social-1/js/vendor/charts/morris/all.js') }}"></script>
          <script src="{{ asset('social-1/js/vendor/charts/sparkline/all.js') }}"></script>
          <script src="{{ asset('social-1/js/vendor/maps/vector/all.js') }}"></script>
-         <script src="{{ asset('social-1/js/vendor/tree/jquery.fancytree-all.js') }}"></script>
+         <script src="{{ asset('social-1/js/vendor/tree/jquery.fancytree-all.js') }}"></script>-->
          <script src="{{ asset('social-1/js/vendor/nestable/jquery.nestable.js') }}"></script>
-         <script src="{{ asset('social-1/js/vendor/angular/all.js') }}"></script>
+         <!--<script src="{{ asset('social-1/js/vendor/angular/all.js') }}"></script>-->
 
         <!-- App Scripts Bundle
           Includes Custom Application JavaScript used for the current theme/module;
@@ -237,7 +302,7 @@
          <script src="{{ asset('social-1/js/app/timeline.js') }}"></script>
          <script src="{{ asset('social-1/js/app/chat.js') }}"></script>
          <script src="{{ asset('social-1/js/app/maps.js') }}"></script>
-         <script src="{{ asset('social-1/js/app/charts/all.js') }}"></script>
+        <!-- <script src="{{ asset('social-1/js/app/charts/all.js') }}"></script>-->
          <script src="{{ asset('social-1/js/app/charts/flot.js') }}"></script>
          <script src="{{ asset('social-1/js/app/charts/easy-pie.js') }}"></script>
          <script src="{{ asset('social-1/js/app/charts/morris.js') }}"></script>

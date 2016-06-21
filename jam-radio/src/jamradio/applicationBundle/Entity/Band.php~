@@ -5,12 +5,12 @@ namespace jamradio\applicationBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Instrument
+ * Band
  *
- * @ORM\Table(name="instrument")
- * @ORM\Entity(repositoryClass="jamradio\applicationBundle\Repository\InstrumentRepository")
+ * @ORM\Table(name="band")
+ * @ORM\Entity(repositoryClass="jamradio\applicationBundle\Repository\BandRepository")
  */
-class Instrument
+class Band
 {
     /**
      * @var int
@@ -31,9 +31,16 @@ class Instrument
     /**
      * @var string
      *
-     * @ORM\Column(name="type", type="string", length=255)
+     * @ORM\Column(name="description", type="string", length=255)
      */
-    private $type;
+    private $description;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="age", type="datetime")
+     */
+    private $age;
 
 
     /**
@@ -51,7 +58,7 @@ class Instrument
      *
      * @param string $name
      *
-     * @return Instrument
+     * @return Band
      */
     public function setName($name)
     {
@@ -71,26 +78,51 @@ class Instrument
     }
 
     /**
-     * Set type
+     * Set description
      *
-     * @param string $type
+     * @param string $description
      *
-     * @return Instrument
+     * @return Band
      */
-    public function setType($type)
+    public function setDescription($description)
     {
-        $this->type = $type;
+        $this->description = $description;
 
         return $this;
     }
 
     /**
-     * Get type
+     * Get description
      *
      * @return string
      */
-    public function getType()
+    public function getDescription()
     {
-        return $this->type;
+        return $this->description;
+    }
+
+    /**
+     * Set age
+     *
+     * @param \DateTime $age
+     *
+     * @return Band
+     */
+    public function setAge($age)
+    {
+        $this->age = $age;
+
+        return $this;
+    }
+
+    /**
+     * Get age
+     *
+     * @return \DateTime
+     */
+    public function getAge()
+    {
+        return $this->age;
     }
 }
+

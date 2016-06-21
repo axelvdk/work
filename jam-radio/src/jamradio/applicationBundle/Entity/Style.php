@@ -63,4 +63,3 @@ class Style
         return $this->name;
     }
 }
-
